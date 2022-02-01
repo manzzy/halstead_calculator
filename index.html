@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+    <title>Halstead Calculator</title>
+</head>
+
+<body>
+
+    <section class="modal" id="modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Halstead Calculator</h3>
+                <span class="close-btn" id="close_btn">&times</span>
+            </div>
+            <div class="modal-content">
+                <p>The purpose of designing this tool is to help in determining the complexity of source code based on the operands and operators. By determining the complexity of code, an appropriate amount of time and resources can be allocated for testing and further development. This Halstead Calculator tool can be used to analyze code during code development and beyond to aid maintenance and to track the complexity and growth of the project.</p>
+
+                <p>The code for this Project could be found <a href="https://github.com/manzzy/halstead_calculator" target="__blank"> here</a>.</p>
+            </div>
+            
+        </div>
+    </section>
+    <section class="inputs">
+        <h3 class="title">Input</h3>
+        <form action="/" method="get" id="form">
+            <label for="n1">Number of Unique Operators</label>
+            <input type="number" name="n1" id="n1" required placeholder="Number of Unique Operators" />
+
+            <label for="q1">Total number of Operators</label>
+            <input type="number" name="q1" id="q1" required placeholder="Total Occurance of Operators" />
+
+            <label for="n2">Number of Unique Operands</label>
+            <input type="number" name="n2" id="n2" required placeholder="Number of Unique Operands" />
+
+            <label for="q2">Number of total Operands</label>
+            <input type="number" name="q2" id="q2" required placeholder="Total Occurance of Operands" />
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="outputs">
+        <h3 class="title">Output</h3>
+
+        <ul>
+            <li>
+                <p>Program Length</p>
+                <p id="pl"> -- </p>
+            </li>
+            <li>
+                <p>Program Vocublary Size</p>
+                <p id="vs"> -- </p>
+            </li>
+            <li>
+                <p>Program Volume</p>
+                <p id="pv"> -- </p>
+            </li>
+            <li>
+                <p>Program Difficulty</p>
+                <p id="pd"> -- </p>
+            </li>
+            <li>
+                <p>Program Level</p>
+                <p id="plevel"> -- </p>
+            </li>
+            <li>
+                <p>Program Effort</p>
+                <p id="pe"> -- </p>
+            </li>
+            <li>
+                <p>Program Time</p>
+                <p id="pt"> -- </p>
+            </li>
+            <li>
+                <p>Program bugs</p>
+                <p id="pb"> -- </p>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
