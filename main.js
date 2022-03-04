@@ -81,9 +81,36 @@ function submitMethod() {
   bugs();
 }
 
+function bringDataFromAPI(){
+  let codes  = document.getElementById('txt-area').value;
+  let str = {
+    code: codes
+  }
+  let code = JSON.parse(str);
+
+  console.log(code)
+  fetch("http://localhost:3000/api", {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: {
+      code
+    }
+  }).then(response => response.json())
+  .then(json => {
+    alert(json);
+  }).then(err => alert("PLease insert proper data"))
+}
+
 document.getElementById("form").addEventListener("submit", (e) => {
   e.preventDefault();
   submitMethod();
+});
+
+document.getElementById("form-code").addEventListener("submit", (e) => {
+  e.preventDefault();
+  bringDataFromAPI();
 });
 
 let load = false;

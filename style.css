@@ -12,7 +12,7 @@ body {
   flex: 1.5;
   padding: 3em 2em;
   background-color: aquamarine;
-  height: 100vh;
+  height: 100%;
   box-shadow: 5px 5px 5px solid white;
 }
 
@@ -23,6 +23,14 @@ form {
 
 label {
   margin: 18px 0;
+}
+
+textarea {
+  padding: 1em;
+}
+
+.code-btn {
+  padding: 10px;
 }
 
 input {
